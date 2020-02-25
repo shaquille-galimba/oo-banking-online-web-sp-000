@@ -27,6 +27,9 @@ class Transfer
       sender.deposit(amount)
       receiver.deposit(-amount)
       @status = "reversed"
+    else
+      @status = "rejected"
+      "Transaction rejecte. Please check your account balance."
     end
   end
 
